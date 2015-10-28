@@ -10,7 +10,7 @@ long long Symbol(long long N,long long K){
         wartosciTrojkata[N][N] = 1;
       for(int K=0; K <= N; ++K) {
         wartosciTrojkata[N][K] = wartosciTrojkata[N-1][K-1] + wartosciTrojkata[N-1][K];
-        return wartosciTrojkata[N][K];
+
       }
     }
 
@@ -20,9 +20,9 @@ long long Symbol(long long N,long long K){
 int main()
 {
     cout << "Podaj wartosci" << endl;
-    long long N,K;
-    cin >> N >> K;
-    cout << wartosciTrojkata[N][K]<<endl;
+    long long n,k;
+    cin >> n >> k;
+    cout << wartosciTrojkata[n][k]<<endl;
     return 0;
 }
 
