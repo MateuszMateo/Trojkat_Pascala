@@ -23,7 +23,7 @@ int main()
     Symbol();
     long long n,k;
     cin >> n >> k;
-    cout << wartosciTrojkata[n][k]<<endl;
+    cout << wartosciTrojkata[n-1][k-1]<<endl;
     return 0;
 }
 
