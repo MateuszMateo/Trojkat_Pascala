@@ -8,8 +8,8 @@ long long Symbol(){
     for(int N=0;N < 2999; ++N) {
         wartosciTrojkata[N][0] = 1;
         wartosciTrojkata[N][N] = 1;
-      for(int K=1; K <= 2999; ++K) {
-        wartosciTrojkata[N][K] = wartosciTrojkata[N-1][K-1] + wartosciTrojkata[N][K-1];
+      for(int K=1; K <= N-1; ++K) {
+        wartosciTrojkata[N][K] = wartosciTrojkata[N-1][K-1] + wartosciTrojkata[N-1][K];
 
 
     }
@@ -23,7 +23,7 @@ int main()
     Symbol();
     long long n,k;
     cin >> n >> k;
-    cout << wartosciTrojkata[n-1][k-1]<<endl;
+    cout << wartosciTrojkata[n][k]<<endl;
     return 0;
 }
 
